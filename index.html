@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PsychoPy Experiment</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/psychopy/psychojs@2024.2.2/lib/psychojs-2024.2.2.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://cdn.jsdelivr.net/gh/psychopy/psychojs@2024.2.2/lib/psychojs-2024.2.2.js"></script>
+
+    <script type="module">
+      import { ExperimentHandler, PsychoJS, Scheduler } from 'https://cdn.jsdelivr.net/gh/psychopy/psychojs@2024.2.2/lib/psychojs-2024.2.2.js';
+      import * as util from 'https://cdn.jsdelivr.net/gh/psychopy/psychojs@2024.2.2/lib/psychojs-2024.2.2.js';
+      // 这里的 './untitled.js' 必须和你上传的 js 文件名一致！
+      import { main } from './untitled.js'; 
+
+      const expName = 'untitled'; 
+      const psychoJS = new PsychoJS({
+        debug: true
+      });
+
+      // --- DataPipe 发送数据代码 (可选) ---
+      // 如果你有 DataPipe ID，填在这里；如果没有，这段代码也不会报错
+      const experimentID = "请在这里填入你的DataPipe_ID"; 
+
+      // 启动实验
+      window.onload = function () {
+        psychoJS.start({
+          expName: expName,
+          expInfo: { participant: '', session: '001' },
+          resources: [
+            // 这里通常不需要手动列出，PsychoJS 会自动处理，或者在 untitled.js 里定义
+          ] 
+        });
+        main(psychoJS);
+      };
+    </script>
+  </body>
+</html>
